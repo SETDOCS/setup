@@ -1,79 +1,68 @@
 #Quick Setup
 
+Provided below are templates on how to connect to Coinbase and Lighter via [CCXT](https://github.com/ccxt/ccxt) or [Hummingbot](https://github.com/hummingbot/hummingbot).
+<br><br>
+***Note:*** The following templates are reference examples; participants should independently verify all details. 
 <hr>
 
 ##Using CCXT
-To start trading with [CCXT](https://github.com/ccxt/ccxt)
+To trade via [CCXT](https://github.com/ccxt/ccxt)
 ```py title="Coinbase"
+import os
 import ccxt
 
-def connect_coinbase():
-    # Initialize Coinbase instance
-    coinbase = ccxt.coinbase({
-        'apiKey': 'YOUR_COINBASE_API_KEY',
-        'secret': 'YOUR_COINBASE_SECRET_KEY',
-        'enableRateLimit': True,
-    })
+# Coinbase issues separate API keys for spot and for perpetuals.
+spot = ccxt.coinbase({
+    "apiKey": os.environ["COINBASE_SPOT_API_KEY"],
+    "secret": os.environ["COINBASE_SPOT_API_SECRET"],
+})
 
-    try:
-        # Load available trading markets
-        coinbase.load_markets()
-        print("Connected to Coinbase successfully!")
 
-        # Fetch market ticker (Public Data)
-        symbol = 'BTC/USD'
-        ticker = coinbase.fetch_ticker(symbol)
-        print(f"\n[Coinbase] {symbol} Price: ${ticker['last']}")
+# Perpetuals run on Coinbase's derivatives gateway, which ccxt reaches through
+# coinbaseinternational. The override works around a bug in ccxt 4.5.90 that
+# breaks the gateway login in Python. Remove it once ccxt fixes it.
+class CoinbasePerps(ccxt.coinbaseinternational):
+    @staticmethod
+    def extend(*args):
+        return ccxt.Exchange.extend(*({} if a is None else a for a in args))
 
-        # Fetch account balances (Private Data)
-        # balance = coinbase.fetch_balance()
-        # print("[Coinbase] Account Balances:", balance['total'])
 
-    except Exception as e:
-        print(f"Coinbase Error: {e}")
+perps = CoinbasePerps({
+    "apiKey": os.environ["COINBASE_PERP_API_KEY"],
+    "secret": os.environ["COINBASE_PERP_API_SECRET"],
+})
+
+print(spot.fetch_balance()["total"])
+print(perps.fetch_balance()["USDC"])   # read USDC only - see below
+print(perps.fetch_positions())
+
+# Placing orders (real money):
+# spot.create_order("BTC/USDC", "limit", "buy", 0.0001, 50000)
+# perps.create_order("ETH/USDC:USDC", "limit", "buy", 0.01, 2000)
 ```
 
 ```py title="Lighter"
-def connect_lighter():
-    # Lighter requires the native C/Go binary compiled for signing operations.
-    # Download the dynamic library for your platform from:
-    # https://github.com/ccxt/lighter-wasm
-    
-    lighter = ccxt.lighter({
-        'privateKey': '0xYOUR_L1_PRIVATE_KEY',  # Your Ethereum wallet private key
-        'enableRateLimit': True,
-        'options': {
-            # Provide path to the compiled signer library (.dylib / .so / .dll)
-            'libraryPath': '/path/to/lighter-signer-darwin-arm64.dylib', 
-            # Optional: Specify accountIndex if using a sub-account (default is auto-fetched)
-            # 'accountIndex': 0, 
-        }
-    })
+import os
+import ccxt
 
-    try:
-        # Load available markets
-        lighter.load_markets()
-        print("\nConnected to Lighter successfully!")
+lighter = ccxt.lighter({
+    "privateKey": os.environ["LIGHTER_WALLET_PRIVATE_KEY"],
+    "options": {
+        "accountIndex": int(os.environ["LIGHTER_ACCOUNT_INDEX"]),
+        "apiKeyIndex": 5,                                  # any free index, 4-254
+        "libraryPath": os.environ["LIGHTER_SIGNER_PATH"],  # Lighter's signing library
+        "builderFee": False,                               # turn off ccxt's own fee
+    },
+})
 
-        # Fetch ticker for a DEX pair (e.g., BTC/USDC perps or spot)
-        symbol = 'BTC/USDC'
-        if symbol in lighter.markets:
-            ticker = lighter.fetch_ticker(symbol)
-            print(f"[Lighter] {symbol} Price: ${ticker['last']}")
-        else:
-            # Print available symbols on Lighter
-            available_symbols = list(lighter.markets.keys())[:5]
-            print(f"[Lighter] Sample available markets: {available_symbols}")
+print(lighter.fetch_balance()["USDC"])
+print(lighter.fetch_positions())
 
-        # Fetch balances (requires privateKey & signer binary)
-        # balance = lighter.fetch_balance()
-        # print("[Lighter] Balances:", balance)
-
-    except Exception as e:
-        print(f"Lighter Error: {e}")
+# Placing an order (real money):
+# lighter.create_order("ETH/USDC:USDC", "limit", "buy", 0.01, 2000)
 ```
 
 <hr>
 
 ##Using Hummingbot
-To start trading with [Hummingbot](https://github.com/hummingbot/hummingbot), view the [installation guide](https://hummingbot.org/installation/).
+To trade via [Hummingbot](https://github.com/hummingbot/hummingbot), view the [installation guide](https://hummingbot.org/installation/).
