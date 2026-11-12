@@ -1,5 +1,5 @@
 #FAQs
-**Does it cost anything?** No. No entry fee, no deposit to SET. You need 100 USDC in your own exchange account to be ranked, and it stays yours.
+**Does it cost anything?** No. No entry fee, no deposit to SET. You need 500 USDC in your own exchange account to be ranked, and it stays yours.
 <br><br>
 **Can I join after it starts?** Yes, until 17 January. You are scored on the days you traded.
 <br><br>
