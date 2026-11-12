@@ -1,5 +1,5 @@
 #FAQs
-**Does it cost anything?** No. No entry fee, no deposit to SET. You need 500 USDC in your own exchange account to be ranked, and it stays yours.
+**Does it cost anything?** No. No entry fee, no deposit to SET. You need 100 USDC in your own exchange account to be ranked, and it stays yours.
 <br><br>
 **Can I join after it starts?** Yes, until 17 January. You are scored on the days you traded.
 <br><br>
@@ -15,7 +15,7 @@
 <br><br>
 **Why has my Sharpe not appeared?** Either you have fewer than three days of returns, or your equity has not moved. Hover the dash on your row and it will say which.
 <br><br>
-**Why am I in "Not yet qualified"?** Your row states the reason. Usually it is the 500 USDC minimum. Fund the account and you move up at the next update, within the hour.
+**Why am I in "Not yet qualified"?** Your row states the reason. Usually it is the 100 USDC minimum. Fund the account and you move up at the next update, within the hour.
 <br><br>
 **I deposited more money. Does that help my score?** No. Deposits and withdrawals are removed from every figure. Only trading moves your score.
 <br><br>

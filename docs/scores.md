@@ -13,14 +13,14 @@ The board updates about once an hour.
 
 <hr>
 
-## The leaderboard
+## The Leaderboard
 
 | Column | What it means |
 | :--- | :--- |
 | **#** | Your rank. A dash means there is no Sharpe to rank you on yet |
 | **Sharpe** | The ranking figure. Hover a dash to see why it is empty |
 | **PnL %** | Your return from trading, with deposits and withdrawals removed |
-| **Volume** | Notional of every order filled during the competition. Both sides count: opening a 500 USDC position and closing it is 1,000 |
+| **Volume** | Notional of every order filled during the competition. Both sides count: opening a 100 USDC position and closing it is 200 |
 | **Equity** | Your account value inside the competition window. It freezes when the competition ends |
 | **Days** | How many days of returns your score rests on |
 | **Trades** | Closed orders during the competition |

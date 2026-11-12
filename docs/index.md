@@ -37,7 +37,7 @@ You can enter on one venue or all three. Each is registered and scored separatel
 
 There is no entry fee and no deposit to SET. You fund your own exchange account and the money never leaves your control.
 <br><br>
-To be ranked you need 500 USDC in the account. Below that you still appear, still get scored, and still count, just in the ***Not yet qualified*** tab rather than the ranking. Put 500 USDC in and you move up.
+To be ranked you need 100 USDC in the account. Below that you still appear, still get scored, and still count, just in the ***Not yet qualified*** tab rather than the ranking. Put 100 USDC in and you move up.
 <br><br>
 It is measured against the highest your account has ever been worth, so once you have qualified, a bad day cannot send you back down.
 
@@ -91,7 +91,7 @@ The trading records go to our market-maker partners, who read them and decide fo
 
 - **56-Day Live Market Sprint**: Test and deploy your automated trading algorithms in real market conditions across an 8-week competition window.
 
-- **$500 Minimum Starting Capital**: Participate with an accessible $500 balance spread across Coinbase and Lighter.
+- **$100 Minimum Starting Capital**: Participate with an accessible $100 balance spread across Coinbase and Lighter.
 
 - **Ranking Matrix**: Performance is evaluated using PnL%, volume, and Sharpe Ratio.
 
