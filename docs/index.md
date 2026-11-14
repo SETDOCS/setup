@@ -1,6 +1,6 @@
 #SET Trading Competition
 
-SET is a 56-day crypto trading competition. You trade your own money on your own exchange accounts, and you are ranked on how well you traded, not on how much you made.
+SET is a 56-day crypto algo-trading competition. You trade your own money on your own exchange accounts, and you are ranked on how well you traded, not on how much you made.
 <br><br>
 It is free to enter. There is no entry fee, no deposit to SET, and nothing you give us can move your funds.
 
