@@ -40,6 +40,8 @@ There is no entry fee and no deposit to SET. You fund your own exchange account 
 To be ranked you need 100 USDC in the account. Below that you still appear, still get scored, and still count, just in the ***Not yet qualified*** tab rather than the ranking. Put 100 USDC in and you move up.
 <br><br>
 It is measured against the highest your account has ever been worth, so once you have qualified, a bad day cannot send you back down.
+<br><br>
+You also need 500 USDC of traded volume to be ranked. Both sides of a round trip count, so opening a 250 USDC position and closing it covers it. It is there because a Sharpe ratio can be flattered by trading almost nothing, and the whole point is to see you trade.
 
 ### About the referral links
 
@@ -61,8 +63,11 @@ Opening your account through SET's link is how the competition is funded. It cos
 - **What SET can see:** your balances, and your closed orders, on the accounts you registered.
 - **What SET cannot do**: place an order, cancel one, move funds between your accounts, or withdraw anything. There is no code in our system that can trade.
 - **How your keys are stored**: verified against the exchange first, then encrypted before they are written down. They are never shown back to you or to anyone else.
+- **What happens to the data**: The privacy notice at set.trade/privacy is the full account: what we collect, who receives it, how long we hold it and how to have it deleted. The short version is that your trading records go to the partner firms, your email address and your keys do not, and everything we hold is deleted within 30 days of the end. Email contact@set.trade to have yours removed sooner.
 
 When you are finished, revoke your keys. Do it at the exchange. That is all it takes: our access ends immediately, you do not need our permission or our help, and it works the same way if you want to leave mid-competition.
+
+
 !!! warning
     Never send anyone a Lighter wallet private key. Not us, not anyone. A wallet key cannot be revoked. The form refuses anything that does not start with ro: for exactly this reason.
 
@@ -83,6 +88,10 @@ Only what you do between 23 November and 18 January. Everything else is invisibl
 - A trade filled before the start is not in your volume or your trade count.
 - A position you were already holding does not show up as profit. Your balance at the start is your starting line, and it already includes whatever that position is worth. Closing it during the competition moves your score by zero.
 - Nothing after the end date counts.
+- 100 USDC in the account to be ranked. See above.
+- 500 USDC of traded volume to be ranked. Both sides of a round trip count. See above.
+- Trade your own account. One entry per person.
+- Your display name and avatar are public. Your email and your keys never are.
 
 ### Rankings
 The trading records go to our market-maker partners, who read them and decide for themselves who is interesting. A high placing is **not** an offer, a guarantee of one, or a promise that anyone will be in touch. And you do not have to win to be worth reading. Partners are looking for how somebody trades, not just who came first, so a strong 20-day showing from a late entrant can be more interesting to them than a mediocre 56-day one. Place twelfth with a clean, disciplined record and you may well get the call.

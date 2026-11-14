@@ -3,6 +3,8 @@
 <br><br>
 **Can I join after it starts?** Yes, until 17 January. You are scored on the days you traded.
 <br><br>
+**What can I use in the competition?** Bots, scripts, your own models, whatever you like. You are assessed on how the account trades, not on what placed the order. Partners hire people who automate well.
+<br><br>
 **I already have a Coinbase account. Do I need a new one?** No. Add SET as your referrer and keep the account you have.
 <br><br>
 **What about Lighter?** Lighter fixes the referral code when the account is created, so that one has to be a new account.
@@ -15,7 +17,7 @@
 <br><br>
 **Why has my Sharpe not appeared?** Either you have fewer than three days of returns, or your equity has not moved. Hover the dash on your row and it will say which.
 <br><br>
-**Why am I in "Not yet qualified"?** Your row states the reason. Usually it is the 100 USDC minimum. Fund the account and you move up at the next update, within the hour.
+**Why am I in "Not yet qualified"?** Usually it is the 100 USDC balance minimum or the 500 USDC volume minimum; fix whichever it names and you move up at the next update, within the hour. It can also be that you registered with a Coinbase account that was flagged as not having SET as its referrer. If that is the case, check your inbox, because we will have emailed you about it.
 <br><br>
 **I deposited more money. Does that help my score?** No. Deposits and withdrawals are removed from every figure. Only trading moves your score.
 <br><br>
@@ -23,8 +25,10 @@
 <br><br>
 **I lost my API key / it expired**. Make a new one and register again with the same email address.
 <br><br>
-**How do I leave? Revoke the key at your exchange**. Email [us](business@set.trade) if you also want your entry removed.
+**How do I leave? Revoke the key at your exchange**. Email [us](contact@set.trade) if you also want your entry removed.
 <br><br>
 **My Lighter token expires, does that matter?** Yes. Set the expiry past 18 January 2027. If it lapses your balance stops updating and your score goes stale rather than wrong.
 <br><br>
 **Is there a prize?** The trading records go to market-maker partners who are looking for people to work with. There is no cash prize, and placing well is not an offer of anything. See above.
+<br><br>
+**Who sees my data, and for how long?** The partner market-maker firms see your trading records, with your display name attached. Your email address and your keys never leave SET. We stop reading your accounts a week after the end and delete what we hold within 30 days. The privacy notice at set.trade/privacy has the detail, and contact@set.trade is where you ask for deletion.
